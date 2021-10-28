@@ -6,11 +6,11 @@ services:
     restart: always
     build: .
     expose:
-      - 3000
+      - '${API_PORT}'
     ports:
-      - '3000:3000'
+      - '${API_PORT}:${API_PORT}'
     environment:
-      API_PORT: 3000
+      API_PORT: '${API_PORT}'
     # comment in when deployed to rickstack VPS
     #   VIRTUAL_HOST: example.rickstack.de
     #   LETSENCRYPT_HOST: example.rickstack.de
