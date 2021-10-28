@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    image: larsrickert/sample-node-api
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    # comment in when deployed to rickstack VPS
+    # environment:
+    #   VIRTUAL_HOST: example.rickstack.de
+    #   LETSENCRYPT_HOST: example.rickstack.de
+    #   LETSENCRYPT_EMAIL: bonus_isotop_0a@icloud.com
+# comment in when deployed to rickstack VPS
+# networks:
+#   default:
+#     external:
+#       name: nginx-proxy
