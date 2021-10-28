@@ -5,10 +5,13 @@ services:
     image: larsrickert/sample-node-api
     restart: always
     build: .
+    expose:
+      - 3000
     ports:
       - '3000:3000'
+    environment:
+      API_PORT: 3000
     # comment in when deployed to rickstack VPS
-    # environment:
     #   VIRTUAL_HOST: example.rickstack.de
     #   LETSENCRYPT_HOST: example.rickstack.de
     #   LETSENCRYPT_EMAIL: bonus_isotop_0a@icloud.com

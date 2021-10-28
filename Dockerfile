@@ -19,7 +19,4 @@ COPY package*.json .
 RUN npm install --only=production --ignore-scripts
 COPY --from=build /usr/src/app/dist ./dist
 
-ENV API_PORT=3000
-EXPOSE 3000
-
 CMD ["npm", "start"]
