@@ -1,5 +1,5 @@
 ## this is the stage one , also know as the build step
-FROM node:17.0.1-alpine3.12 as build
+FROM node:alpine as build
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
 
 ## this is stage two , where the app actually runs
-FROM node:17.0.1-alpine3.12
+FROM node:alpine
 
 WORKDIR /usr/src/app
 COPY package*.json .
