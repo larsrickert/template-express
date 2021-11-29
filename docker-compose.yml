@@ -7,15 +7,16 @@ services:
     build: .
     ports:
       - '3000:3000'
+    env_file: .env
     volumes:
       - ./logs:/usr/src/app/logs
+    # Needed when deploying on RickStack VPS
     # environment:
-    # comment in when deployed to rickstack VPS
-    #   VIRTUAL_HOST: example.rickstack.de
-    #   LETSENCRYPT_HOST: example.rickstack.de
-    #   LETSENCRYPT_EMAIL: bonus_isotop_0a@icloud.com
+    #   VIRTUAL_HOST: '${DOCKER_DOMAIN}'
+    #   LETSENCRYPT_HOST: '${DOCKER_DOMAIN}'
+    #   LETSENCRYPT_EMAIL: '${DOCKER_LETSENCRYPT_EMAIL}'
 # comment in when deployed to rickstack VPS
 # networks:
 #   default:
-#     external:
-#       name: nginx-proxy
+#     name: nginx-proxy
+#     external: true
