@@ -1,5 +1,7 @@
-import { router } from '../server';
+import { RequestHandler } from 'express';
 
-router.get('/', (_, res) => {
-  res.status(200).send({ data: 'Hello from the node API.' });
-});
+const indexRouteGetHandler: RequestHandler = (_, res) => {
+  res.send({ data: 'Hello from the node API.' });
+};
+
+export default indexRouteGetHandler;

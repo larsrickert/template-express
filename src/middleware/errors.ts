@@ -6,10 +6,10 @@ import { logger } from '../server';
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const errorMiddleware: ErrorRequestHandler = (err, req, res, next) => {
-  logger.error(`Unhandled application error on route ${req.path}, ${err.stack}`);
+  logger.error(`Unhandled application error on route "${req.path}"`, err);
 
   res.status(500).send({
-    message: 'An internal error occured.',
+    message: 'An unknown internal error occurred.',
   });
 };
 
