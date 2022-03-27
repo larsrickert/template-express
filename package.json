@@ -1,11 +1,8 @@
 {
-  "name": "api",
+  "name": "template-express",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/server.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": true,
   "scripts": {
     "dev": "tsc -w & NODE_ENV=development nodemon .",
     "build": "tsc",
