@@ -1,8 +1,8 @@
-FROM node:17-alpine
+FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY . ./
 
 #  --ignore-scripts is needed to not run husky prepare script
 RUN npm ci --only=production --ignore-scripts
