@@ -1,4 +1,4 @@
-name: Lint and build
+name: Check source files
 on: pull_request
 
 jobs:
@@ -16,5 +16,3 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: Build
-        run: npm run build

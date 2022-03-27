@@ -16,4 +16,4 @@ app.use(router)
 router.use(loggerMiddleware)
 router.use(errorMiddleware)
 
-app.listen(port, () => console.log(`Running on port ${port}`))
+app.listen(port, () => console.log(`Running on http://localhost:${port}`))
