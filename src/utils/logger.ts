@@ -2,10 +2,13 @@ import fs from 'fs/promises';
 import path from 'path';
 import { config, isProduction } from '../config';
 import { Logger } from '../types/logger';
-import { getTimestamp } from './dates';
 
 const logDir = path.join(__dirname, '../../logs/');
 const textEncoder = new TextEncoder();
+
+function getTimestamp(): string {
+  return `[${new Date().toUTCString()}]`;
+}
 
 async function writeToLogFile(path: string, data: string) {
   try {
