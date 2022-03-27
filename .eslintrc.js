@@ -12,13 +12,13 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
-      1,
+      'error',
       {
         trailingComma: 'es5',
         singleQuote: true,
-        semi: false,
+        semi: true,
         printWidth: 100,
       },
     ],
   },
-}
+};

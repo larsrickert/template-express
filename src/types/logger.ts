@@ -1,5 +1,5 @@
 export interface Logger {
-  log(message: unknown): Promise<void>
-  error(message: unknown): Promise<void>
-  debug(message: unknown): void
+  log(message: string): Promise<void>;
+  error(message: string, error?: Error): Promise<void>;
+  debug(message: string): Promise<void>;
 }
