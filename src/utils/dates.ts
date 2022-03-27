@@ -1,3 +1,3 @@
 export function getTimestamp(): string {
-  return `[${new Date().toUTCString()}]`
+  return `[${new Date().toUTCString()}]`;
 }
