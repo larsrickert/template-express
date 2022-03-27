@@ -1,6 +1,6 @@
 import express from 'express';
 import { config } from './config';
-import errorMiddleware from './middleware/errors.middleware';
+import errorMiddleware from './middleware/error.middleware';
 import loggerMiddleware from './middleware/logger.middleware';
 import indexRouteGetHandler from './routes/index.routes';
 import { createLogger } from './utils/logger';
