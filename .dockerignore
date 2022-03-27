@@ -3,4 +3,4 @@
 dist
 logs
 node_modules
-.env.template
+.env.example

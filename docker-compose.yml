@@ -2,9 +2,9 @@ version: '3'
 
 services:
   backend:
-    image: larsrickert/sample-node-api
-    restart: always
     build: .
+    image: larsrickert/template-express
+    restart: always
     ports:
       - '3000:3000'
     env_file: .env
@@ -14,7 +14,6 @@ services:
     # environment:
     #   VIRTUAL_HOST: '${DOCKER_DOMAIN}'
     #   LETSENCRYPT_HOST: '${DOCKER_DOMAIN}'
-    #   LETSENCRYPT_EMAIL: '${DOCKER_LETSENCRYPT_EMAIL}'
 # comment in when deployed to rickstack VPS
 # networks:
 #   default:

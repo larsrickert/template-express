@@ -10,12 +10,16 @@
     "dev": "tsc -w & NODE_ENV=development nodemon .",
     "build": "tsc",
     "start": "NODE_ENV=production node .",
+    "lint": "eslint --fix",
     "format": "prettier --write src --ignore-path .gitignore",
     "update": "npx npm-check-updates -i",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts}": "eslint --cache --fix && prettier --write"
+    "*.{js,ts}": [
+      "eslint --cache --fix",
+      "prettier --write --ignore-path .gitignore"
+    ]
   },
   "dependencies": {
     "dotenv": "^16.0.0",
