@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import { logger } from '../server';
+import { logger } from '../app';
 
 /**
  * Creates a debug log for every route that is accessed

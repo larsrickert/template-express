@@ -3,7 +3,7 @@ export interface Config {
     port: number;
   };
   log: {
-    /** Max size of the logfile in bytes */
+    /** Max size of the log file in bytes */
     maxSize: number;
   };
 }

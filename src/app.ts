@@ -1,8 +1,8 @@
 import express from 'express';
 import { config } from './config';
-import errorMiddleware from './middleware/errors';
-import loggerMiddleware from './middleware/logger';
-import indexRouteGetHandler from './routes';
+import errorMiddleware from './middleware/errors.middleware';
+import loggerMiddleware from './middleware/logger.middleware';
+import indexRouteGetHandler from './routes/index.routes';
 import { createLogger } from './utils/logger';
 
 const app = express();
