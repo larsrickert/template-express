@@ -4,8 +4,9 @@ WORKDIR /usr/src/app
 
 COPY . ./
 
-#  --ignore-scripts is needed to not run husky prepare script
-RUN npm ci --only=production --ignore-scripts
+#  remove husky init script (needed because --only=production does not install husky)
+RUN npm set-script prepare ""
+RUN npm ci --only=production
 
 EXPOSE 3000
 CMD ["npm", "start"]

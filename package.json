@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node-dev .",
     "start": "cross-env NODE_ENV=production ts-node .",
-    "lint": "tsc --noEmit && eslint --fix src",
+    "lint": "tsc --noEmit && eslint --fix src --ignore-path .gitignore",
     "format": "prettier --write src --ignore-path .gitignore",
     "update": "npx npm-check-updates -i",
     "prepare": "husky install"
