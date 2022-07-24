@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/larsrickert/template-express/compare/v1.0.0...v1.1.0) (2022-07-24)
+
+
+### Features
+
+* add build step ([#2](https://github.com/larsrickert/template-express/issues/2)) ([16042a3](https://github.com/larsrickert/template-express/commit/16042a3a32c0d03129a4b018e605882aaad7ec6f))
+
 # 1.0.0 (2022-06-10)
 
 
