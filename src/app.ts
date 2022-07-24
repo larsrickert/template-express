@@ -1,12 +1,12 @@
 import express from "express";
 import { config } from "./config";
 import errorMiddleware from "./middleware/error.middleware";
-import { indexRouteGetHandler } from "./routes/index.routes";
+import * as helloWorld from "./routes/index.routes";
 
 const app = express();
 
 // app routes
-app.get("/", indexRouteGetHandler);
+app.get("/", helloWorld.find);
 
 app.listen(config.app.port, () =>
   console.log(`Running on http://localhost:${config.app.port}`)
