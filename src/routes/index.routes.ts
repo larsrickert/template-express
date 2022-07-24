@@ -1,5 +1,11 @@
 import { RequestHandler } from "express";
 
-export const indexRouteGetHandler: RequestHandler = (_, res) => {
-  res.send({ data: "Hello from the node template API." });
+export const find: RequestHandler = (req, res) => {
+  const data = [
+    {
+      id: 1,
+      message: "Hello World",
+    },
+  ];
+  res.send(data);
 };
