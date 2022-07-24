@@ -1,6 +1,6 @@
 FROM node:16-alpine as build
 
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
@@ -9,7 +9,10 @@ RUN npm run build
 
 # production stage
 FROM node:16-alpine
-COPY --from=build /usr/src/app/dist ./dist
+
+WORKDIR /app
+
+COPY --from=build /app/dist ./dist
 
 COPY package*.json ./
 # remove husky init script (needed because --omit=dev does not install husky)
