@@ -14,13 +14,19 @@ npm install
 npm run dev
 ```
 
+### Build for production
+
+```
+npm run build
+```
+
 ### Start for production
 
 ```
 npm start
 ```
 
-### Lints and fixes files
+### Lints, fixes and format files
 
 ```
 npm run lint
@@ -35,8 +41,6 @@ npm run lint
 | controllers   | App functionality, used by routes                                      |
 | middleware    | Express middleware for intercepting requests                           |
 | routes        | Handlers for all API routes                                            |
-| types         | Global TypeScript types, interfaces, classes etc                       |
-| utils         | Common helper functions/utilities                                      |
 | app.ts        | Main app entry file. Creates app and registers middleware, routes etc. |
 | config.ts     | Static configuration/environments                                      |
 
